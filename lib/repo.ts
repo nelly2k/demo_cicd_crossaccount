@@ -9,7 +9,7 @@ export class Repo extends Construct {
             description: 'demo01. Cross account CI/CD pipeline with CDK'
         });
 
-        new CfnOutput(this, 'repo.git_url', {
+        new CfnOutput(this, 'repo_url_http.output', {
             value: repository.repositoryCloneUrlHttp,
             description: "Demo repository http url"
         });
