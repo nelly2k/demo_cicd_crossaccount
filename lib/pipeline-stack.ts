@@ -6,7 +6,7 @@ export class DemoCicdCrossAccountStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const repo= new Repo(this, 'repo.construct');
+    new Repo(this, 'repo.construct');
 
     Tags.of(this).add('purpose', 'demo');
     Tags.of(this).add('app', 'cicd_cross_account');
