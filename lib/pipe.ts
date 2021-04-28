@@ -25,8 +25,7 @@ export class Pipe extends Construct {
         const synthAction = pipelines.SimpleSynthAction.standardNpmSynth({
             sourceArtifact,
             cloudAssemblyArtifact,
-
-            installCommand: 'npm --version && npm update aws-cdk && npm install',
+            installCommand: 'npm install',
             buildCommand: 'npm run build',
             actionName: 'Cdk_Build'
         });
