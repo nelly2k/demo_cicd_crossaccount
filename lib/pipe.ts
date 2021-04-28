@@ -37,7 +37,7 @@ export class Pipe extends Construct {
             synthAction,
           });
 
-        pipeline.addApplicationStage(new AppStage(this, 'test.stage', {
+        pipeline.addApplicationStage(new AppStage(this, 'teststage', {
             stageName: 'test',
             env:props.testEnv
           }))
