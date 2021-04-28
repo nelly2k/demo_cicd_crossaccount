@@ -5,7 +5,9 @@ import * as DemoCicdCrossAccount from '../lib/pipeline-stack';
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new DemoCicdCrossAccount.DemoCicdCrossAccountStack(app, 'MyTestStack');
+  const stack = new DemoCicdCrossAccount.DemoCicdCrossAccountStack(app, 'MyTestStack', {
+      testEnv: {account:'111'}
+    });
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}

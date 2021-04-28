@@ -21,7 +21,6 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-codecommit": "^1.100.0",
     "@aws-cdk/aws-codedeploy": "^1.100.0",
     "@aws-cdk/aws-codepipeline": "^1.100.0",
     "@aws-cdk/aws-codepipeline-actions": "^1.100.0",
