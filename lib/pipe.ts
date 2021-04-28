@@ -41,5 +41,10 @@ export class Pipe extends Construct {
             stageName: 'test',
             env: props.testEnv
         }));
+
+        pipeline.addApplicationStage(new AppStage(this, 'prodstage', {
+            stageName: 'prod',
+            env: props.prodEnv
+        }));
     }
 }
