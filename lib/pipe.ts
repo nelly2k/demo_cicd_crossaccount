@@ -20,12 +20,12 @@ export class Pipe extends Construct {
             output: sourceArtifact,
             branch: 'master',
             trigger: GitHubTrigger.WEBHOOK
-          });
+        });
 
         const synthAction = pipelines.SimpleSynthAction.standardNpmSynth({
             sourceArtifact,
             cloudAssemblyArtifact,
-        
+
             installCommand: 'npm update aws-cdk & npm install',
             buildCommand: 'npm run build',
             actionName: 'Cdk_Build'
@@ -36,11 +36,11 @@ export class Pipe extends Construct {
             cloudAssemblyArtifact,
             sourceAction,
             synthAction,
-          });
+        });
 
         pipeline.addApplicationStage(new AppStage(this, 'teststage', {
             stageName: 'test',
-            env:props.testEnv
-          }))
+            env: props.testEnv
+        }));
     }
 }
