@@ -26,7 +26,7 @@ export class Pipe extends Construct {
             sourceArtifact,
             cloudAssemblyArtifact,
 
-            installCommand: 'npm update aws-cdk & npm install',
+            installCommand: 'npm --version && npm update aws-cdk && npm install',
             buildCommand: 'npm run build',
             actionName: 'Cdk_Build'
         });
