@@ -6,7 +6,8 @@ test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
   const stack = new DemoCicdCrossAccount.DemoCicdCrossAccountStack(app, 'MyTestStack', {
-      testEnv: {account:'111'}
+    testEnv: { account: '111' },
+    prodEnv: {account:'ddf'}
     });
     // THEN
     expectCDK(stack).to(matchTemplate({
